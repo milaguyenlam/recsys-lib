@@ -44,7 +44,8 @@ class RecommendationScheduler:
         datetime_of_first_run = self.scheduler_options.datetime_of_first_run
         if datetime_of_first_run:
             # the max() is called in case datetime_of_first_run < datetime.now()
-            time_until_first_run = max(datetime_of_first_run - datetime.now(), timedelta(seconds=0))
+            time_until_first_run = max(
+                datetime_of_first_run - datetime.now(), timedelta(seconds=0))
             sleep(time_until_first_run.total_seconds())
         run_loop()
 
