@@ -7,7 +7,7 @@ import os
 from datetime import datetime, time, timedelta
 from time import sleep
 
-from core.Helpers.helpers import get_nearest_time
+from helpers import get_nearest_time
 
 
 class RecommenderModule(ABC):
